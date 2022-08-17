@@ -4,7 +4,7 @@ gd-text
 ### Installation via Composer:
 
 ```bash
-composer require stil/gd-text
+composer require bytexs/gd-text-ng
 ```
 
 ### Basic usage example
@@ -12,8 +12,8 @@ composer require stil/gd-text
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use GDText\Box;
-use GDText\Color;
+use GDTextNg\Box;
+use GDTextNg\Color;
 
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
@@ -61,8 +61,8 @@ Multilined text
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use GDText\Box;
-use GDText\Color;
+use GDTextNg\Box;
+use GDTextNg\Color;
 
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
@@ -92,8 +92,8 @@ Text stroke
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use GDText\Box;
-use GDText\Color;
+use GDTextNg\Box;
+use GDTextNg\Color;
 
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
@@ -122,8 +122,8 @@ Text background
 <?php
 require __DIR__.'/../vendor/autoload.php';
 
-use GDText\Box;
-use GDText\Color;
+use GDTextNg\Box;
+use GDTextNg\Color;
 
 $im = imagecreatetruecolor(500, 500);
 $backgroundColor = imagecolorallocate($im, 0, 18, 64);
