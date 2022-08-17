@@ -1,6 +1,6 @@
 {
   "name": "bytexs/gd-text-ng",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Forked from stil/gd-text. A class drawing multiline and aligned text on pictures. Uses GD extension.",
   "license": "MIT",
   "type": "library",
