@@ -1,5 +1,5 @@
-gd-text
-=======
+gd-text-ng
+==========
 
 ### Installation via Composer:
 
