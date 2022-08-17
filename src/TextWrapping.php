@@ -1,8 +1,10 @@
 <?php
-namespace GDText;
 
-abstract class TextWrapping
-{
-    const NoWrap = 1;
-    const WrapWithOverflow = 2;
+namespace GDTextNg {
+
+    abstract class TextWrapping {
+
+        final const NO_WRAP            = 1;
+        final const WRAP_WITH_OVERFLOW = 2;
+    }
 }

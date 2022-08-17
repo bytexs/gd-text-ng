@@ -1,43 +1,20 @@
 <?php
 
-namespace GDText\Struct;
+namespace GDTextNg\Struct {
 
-class Point
-{
-    /**
-     * @var int
-     */
-    private $x;
+    class Point {
 
-    /**
-     * @var int
-     */
-    private $y;
+        /**
+         * Point constructor.
+         */
+        public function __construct(private readonly int $x, private readonly int $y) {}
 
-    /**
-     * Point constructor.
-     * @param int $x
-     * @param int $y
-     */
-    public function __construct($x, $y)
-    {
-        $this->x = $x;
-        $this->y = $y;
-    }
+        public function getX(): int {
+            return $this->x;
+        }
 
-    /**
-     * @return int
-     */
-    public function getX()
-    {
-        return $this->x;
-    }
-
-    /**
-     * @return int
-     */
-    public function getY()
-    {
-        return $this->y;
+        public function getY(): int {
+            return $this->y;
+        }
     }
 }

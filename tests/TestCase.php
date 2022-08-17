@@ -1,39 +1,45 @@
 <?php
-namespace GDText\Tests;
+declare(strict_types = 1);
 
-class TestCase extends \PHPUnit\Framework\TestCase
-{
-    /**
-     * @param $name
-     * @return resource
-     */
-    protected function openImageResource($name)
-    {
-        return imagecreatefromstring(file_get_contents(__DIR__.'/images/'.$name));
-    }
+namespace GDTextNg\Tests {
 
-    /**
-     * @param $name
-     * @return string
-     */
-    protected function sha1ImageResource($name)
-    {
-        return sha1_file(__DIR__.'/images/'.$name);
-    }
+    use function file_get_contents;
+    use function imagecreatefromstring;
+    use function imagepng;
+    use function ob_end_clean;
+    use function ob_get_contents;
+    use function ob_start;
+    use function sha1;
+    use function sha1_file;
 
-    /**
-     * @param string $name
-     * @param resource $im
-     */
-    protected function assertImageEquals($name, $im)
-    {
-        //return imagepng($im, __DIR__.'/images/'.$name);
+    class TestCase
+        extends \PHPUnit\Framework\TestCase {
 
-        ob_start();
-        imagepng($im);
-        $sha1 = sha1(ob_get_contents());
-        ob_end_clean();
+        /**
+         * @param $name
+         *
+         * @return resource
+         */
+        protected function openImageResource(string $name) {
+            return imagecreatefromstring(file_get_contents(__DIR__ . '/images/' . $name));
+        }
 
-        $this->assertEquals($this->sha1ImageResource($name), $sha1);
+        /**
+         * @param resource $im
+         */
+        protected function assertImageEquals(string $name, $im) {
+            ob_start();
+            imagepng($im);
+            $sha1 = sha1(ob_get_contents());
+            ob_end_clean();
+            $this->assertEquals($this->sha1ImageResource($name), $sha1);
+        }
+
+        /**
+         * @param $name
+         */
+        protected function sha1ImageResource($name): string {
+            return sha1_file(__DIR__ . '/images/' . $name);
+        }
     }
 }

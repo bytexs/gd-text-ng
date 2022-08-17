@@ -1,5 +1,8 @@
-gd-text-ng
-==========
+# gd-text-ng
+
+Forked from stil/gd-text
+
+This is a fork of the original gd-text project. It is now working with the latest version of PHP (tested with 8.1).
 
 ### Installation via Composer:
 

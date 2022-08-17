@@ -1,9 +1,11 @@
 <?php
-namespace GDText;
 
-abstract class VerticalAlignment
-{
-    const Top = 'top';
-    const Bottom = 'bottom';
-    const Center = 'center';
+namespace GDTextNg {
+
+    abstract class VerticalAlignment {
+
+        final const TOP    = 'top';
+        final const BOTTOM = 'bottom';
+        final const CENTER = 'center';
+    }
 }

@@ -1,78 +1,39 @@
 <?php
 
-namespace GDText\Struct;
+namespace GDTextNg\Struct {
 
-class Rectangle extends Point
-{
-    /**
-     * @var int
-     */
-    private $width;
+    class Rectangle
+        extends Point {
 
-    /**
-     * @var int
-     */
-    private $height;
+        /**
+         * Rectangle constructor.
+         */
+        public function __construct(int $x, int $y, private readonly int $width, private readonly int $height) {
+            parent::__construct($x, $y);
+        }
 
-    /**
-     * Rectangle constructor.
-     * @param int $x
-     * @param int $y
-     * @param int $width
-     * @param int $height
-     */
-    public function __construct($x, $y, $width, $height)
-    {
-        parent::__construct($x, $y);
-        $this->width = $width;
-        $this->height = $height;
-    }
+        public function getWidth(): int {
+            return $this->width;
+        }
 
-    /**
-     * @return int
-     */
-    public function getWidth()
-    {
-        return $this->width;
-    }
+        public function getHeight(): int {
+            return $this->height;
+        }
 
-    /**
-     * @return int
-     */
-    public function getHeight()
-    {
-        return $this->height;
-    }
+        public function getLeft(): int {
+            return $this->getX();
+        }
 
-    /**
-     * @return int
-     */
-    public function getLeft()
-    {
-        return $this->getX();
-    }
+        public function getTop(): int {
+            return $this->getY();
+        }
 
-    /**
-     * @return int
-     */
-    public function getTop()
-    {
-        return $this->getY();
-    }
+        public function getRight(): int {
+            return $this->getX() + $this->width;
+        }
 
-    /**
-     * @return int
-     */
-    public function getRight()
-    {
-        return $this->getX() + $this->width;
-    }
-
-    /**
-     * @return int
-     */
-    public function getBottom()
-    {
-        return $this->getY() + $this->height;
+        public function getBottom(): int {
+            return $this->getY() + $this->height;
+        }
     }
 }
