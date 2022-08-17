@@ -1,20 +1,30 @@
 {
-    "name": "bytexs/gd-text-ng",
-    "description": "Forked from stil/gd-text. A class drawing multiline and aligned text on pictures. Uses GD extension.",
-    "license": "MIT",
-    "require": {
-        "php": ">=8.1",
-        "ext-gd": "*",
-        "ext-csprng": "*"
+  "name": "bytexs/gd-text-ng",
+  "version": "1.1.1",
+  "description": "Forked from stil/gd-text. A class drawing multiline and aligned text on pictures. Uses GD extension.",
+  "license": "MIT",
+  "type": "library",
+  "prefer-stable": true,
+  "minimum-stability": "stable",
+  "config": {
+    "platform": {
+      "php": "8.1.0"
     },
-    "require-dev": {
-        "rector/rector": "@stable",
-        "phpunit/phpunit": "@stable"
-    },
-    "autoload": {
-        "psr-4": {
-            "GDTextNg\\": "src/",
-            "GDTextNg\\Tests\\": "tests/"
-        }
+    "optimize-autoloader": true,
+    "sort-packages": true
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-gd": "*"
+  },
+  "require-dev": {
+    "rector/rector": "@stable",
+    "phpunit/phpunit": "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "GDTextNg\\": "src/",
+      "GDTextNg\\Tests\\": "tests/"
     }
+  }
 }
