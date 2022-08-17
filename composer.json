@@ -1,6 +1,6 @@
 {
-    "name": "stil/gd-text",
-    "description": "A class drawing multiline and aligned text on pictures. Uses GD extension.",
+    "name": "bytexs/gd-text-ng",
+    "description": "Forked from stil/gd-text. A class drawing multiline and aligned text on pictures. Uses GD extension.",
     "license": "MIT",
     "require": {
         "php": ">=8.1",
